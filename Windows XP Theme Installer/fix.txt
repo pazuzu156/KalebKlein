@@ -1,0 +1,31 @@
+So, you ran "INSTALL" after you erased the directory huh? Well here is how you will fix your little "problem"
+
+Restart your computer, and when the splash screen comes up the second you press the power button, hold the F8 key (this can be different for each computer)
+
+You should get a list of options, select the one that says "Safe Mode With Command Prompt"
+
+Once Windows starts and you login, you are given a black box called "Command Prompt"
+
+To fix your problem, type in the following commands:
+
+==============================================================
+
+cd "%appdata%\.theme_backup"
+copy /y uxtheme.dll.bak "%windir%\System32"
+copy /y themeui.dll.bak "%windir%\System32"
+copy /y themeservice.dll.bak "%windir%\System32"
+copy /y explorer.exe.bak %windir%
+cd %windir%
+ren explorer.exe.bak explorer.exe
+cd \System32
+ren uxtheme.dll.bak uxtheme.dll
+ren themeui.dll.bak themeui.dll
+ren themeservice.dll.bak themeservice.dll
+
+==============================================================
+
+Afterwords, you should be good, just restart your computer and run normally.
+
+I gave you a warning in the readme.txt file, do not run the install function if you removed the directory.
+
+If you did as I said not to, and you cannot fix what you have broken, then I will say you cannot hold me liable for your mistake. Please be more cautious

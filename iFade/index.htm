@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<title>iFade - jQuery Image Fade Plugin</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/iFade.jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("img.iFade").iFade();
+});
+</script>
+<style type="text/css">
+#wrapper {
+	width:700px;
+	margin-top:140px;
+}
+#img {
+	position:absolute;
+	top:40px;
+	left:10px;
+}
+</style>
+</head>
+<body>
+<div id="img">
+	<img src="images/iFade.png" alt="iFade Logo" class="iFade" style="background:url(images/iFadeOver.png);">
+</div>
+<div id="wrapper">
+	<p>jQuery iFade Plugin. <a href="http://www.kalebklein.com/downloads.php?f=iFade" target="_blank">Download source</a> or fork the project on <a href="https://github.com/pazuzu156/KalebKlein/tree/master/iFade-git" target="_blank">Github</a>.</p>
+	<p style="font-size:9pt;text-align:center;border-top:1px solid #000;margin-top:5px;padding-top:5px;">iFade and images &copy 2011 <a href="http://www.kalebklein.com/" target="_blank">Kaleb Klein</a> - All Rights Reserved</p>
+</div>
+</body>
+</html>
