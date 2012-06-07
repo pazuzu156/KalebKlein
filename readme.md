@@ -8,6 +8,8 @@ Projects
 --------
 iFade - jQuery Image Fade Plugin<br>
 Windows XP Theme Installer - XP Theme Installer for Vista and 7<br>
+Windows XP/Vista/7 Messenger - Batch messenger for XP+<br>
+K-Box - jQuery modal box plugin<br>
 ..more to come soon..
 
 Collaborators
