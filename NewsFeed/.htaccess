@@ -1,0 +1,20 @@
+# NewsFeed Example by Kaleb Klein
+#
+# (c) 2013 Kaleb Klein. All Rights Reserved
+# 
+# File: .htaccess
+# About: This is the routing file. This file
+#		is used to create the RESTful URL routes
+
+RewriteEngine On
+RewriteBase /NewsFeed/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Feed URL
+RewriteRule ^(asc|desc)/feed(\.xml|\.json)$ feed/rss.php?order=$1&type=$2&limit=50
+RewriteRule ^feed(\.xml|\.json)$ feed/rss.php?type=$1&order=desc&limit=50
+RewriteRule ^(asc|desc)/([0-9]+)/feed(\.xml|\.json)$ feed/rss.php?order=$1&type=$3&limit=$2
+RewriteRule ^([0-9]+)/feed(\.xml|\.json)$ feed/rss.php?type=$2&order=desc&limit=$1
