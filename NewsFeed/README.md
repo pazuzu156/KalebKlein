@@ -14,7 +14,7 @@ $feed = new NewsFeed();<br>
 $feed->set_encoding_type($type);<br>
 $feed->order($_GET['order']);<br>
 $feed->limit($_GET['limit']);<br>
-$feed->parse();
+$feed->parse();<br>
 ?&gt;
 
 Changelog
